@@ -3,9 +3,9 @@
 Plugin Name: JQuery Accessible Progressbar
 Plugin URI: http://wordpress.org/extend/plugins/jquery-accessible-progressbar/
 Description: WAI-ARIA Enabled Progressbar Plugin for Wordpress
-Author: Theofanis Oikonomou, Kontotasiou Dionysia
-Version: 2.0
-Author URI: http://www.iti.gr/iti/people/ThOikon.html, http://www.iti.gr/iti/people/Dionisia_Kontotasiou.html
+Author: Kontotasiou Dionysia
+Version: 3.0
+Author URI: http://www.iti.gr/iti/people/Dionisia_Kontotasiou.html
 */
 
 add_action("plugins_loaded", "JQueryAccessibleProgressbar_init");
@@ -19,8 +19,8 @@ function JQueryAccessibleProgressbar_init() {
         wp_deregister_script('jquery');
 
         // add your own script
-        wp_register_script('jquery-1.4.2', ( get_bloginfo('wpurl') . '/wp-content/plugins/jquery-accessible-progressbar/lib/jquery-ui/jquery-1.4.2.js'));
-        wp_enqueue_script('jquery-1.4.2');
+        wp_register_script('jquery-1.6.4', ( get_bloginfo('wpurl') . '/wp-content/plugins/jquery-accessible-progressbar/lib/jquery-ui/jquery-1.6.4.js'));
+        wp_enqueue_script('jquery-1.6.4');
 
         wp_register_script('jquery.ui.core', ( get_bloginfo('wpurl') . '/wp-content/plugins/jquery-accessible-progressbar/lib/jquery-ui/ui/jquery.ui.core.js'));
         wp_enqueue_script('jquery.ui.core');
@@ -40,8 +40,8 @@ function JQueryAccessibleProgressbar_init() {
         wp_register_style('demos', ( get_bloginfo('wpurl') . '/wp-content/plugins/jquery-accessible-progressbar/lib/jquery-ui/demos.css'));
         wp_enqueue_style('demos');
 
-        wp_register_script('JQueryAccessibleProgressbar', ( get_bloginfo('wpurl') . '/wp-content/plugins/jquery-accessible-progressbar/lib/JQueryAccessibleProgressbar.js'));
-        wp_enqueue_script('JQueryAccessibleProgressbar');
+        wp_register_script('jquery-accessible-progressbar', ( get_bloginfo('wpurl') . '/wp-content/plugins/jquery-accessible-progressbar/lib/jquery-accessible-progressbar.js'));
+        wp_enqueue_script('jquery-accessible-progressbar');
     }
 }
 
